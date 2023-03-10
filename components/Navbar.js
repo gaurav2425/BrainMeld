@@ -1,6 +1,7 @@
 import {StatusBar, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const Navbar = () => {
   return (
@@ -8,11 +9,11 @@ const Navbar = () => {
       <Text style={styles.navbar_left_logo}>BrainMeld</Text>
 
       <View style={styles.messagebox}>
-        <AntDesign
-          name="message1"
+        <MaterialIcons
+          name="menu"
           size={25}
-          color="#FFFFFF"
-          style={styles.message_icon}></AntDesign>
+          color="#000000"
+          style={styles.message_icon}></MaterialIcons>
       </View>
     </View>
   );
@@ -39,9 +40,9 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   messagebox: {
-    width: 40,
-    height: 40,
-    backgroundColor: '#0C0C0C',
+    width: 35,
+    height: 35,
+    backgroundColor: '#FFFFFF',
     // marginLeft: 5,
     marginRight: 10,
     // marginRight: 60,

@@ -1,15 +1,27 @@
-import {StyleSheet, Text, View, StatusBar, ScrollView} from 'react-native';
-import React from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  StatusBar,
+  ScrollView,
+  Button,
+} from 'react-native';
+import React, {useState} from 'react';
 import Navbar from '../components/Navbar';
 import Inputbox from '../components/Inputbox';
 import Chat from '../components/Chat';
 import Drawer from '../components/Drawer';
+import AnimatedTyping from '../components/AnimatedTyping';
 
 const Home = () => {
+  let [greetingCompleted, setGreetingCompleted] = useState(false);
+  let [nextPressed, setNextPressed] = useState(false);
+
   return (
     <View style={styles.home}>
       <Navbar></Navbar>
-      <Drawer></Drawer>
+      {/* <Drawer></Drawer> */}
+
       <ScrollView
         style={styles.scrollview}
         contentContainerStyle={{
@@ -18,10 +30,16 @@ const Home = () => {
           justifyContent: 'flex-end',
           alignItems: 'center',
         }}>
+        <Chat
+          text={[
+            "Life is full of challenges and obstacles, but it's important to remember that these challenges are what make us stronger and more resilient. Don't be afraid to step outside of your comfort zone and take risks, for it is through the Life is full of challenges and obstacles, but it's important to remember that these challenges are what make us stronger and more resilient. Don't be afraid to step outside of your comfort zone and take risks, for it is through the",
+          ]}
+          onComplete={() => setGreetingCompleted(true)}></Chat>
+
+        {/* <Chat></Chat>
         <Chat></Chat>
-        <Chat></Chat>
-        <Chat></Chat>
-        <Chat></Chat>
+        <Chat></Chat> */}
+
         <Text style={styles.txt_header}>Exceptions Make Reality</Text>
         <Text style={styles.txt}>
           Life is full of challenges and obstacles, but it's important to
