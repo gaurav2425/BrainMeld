@@ -96,9 +96,7 @@ const Chat = props => {
             }}
           />
         </View>
-        <Text style={styles.chat_que_txt}>
-          Give me some motivational Quotes
-        </Text>
+        <Text style={styles.chat_que_txt}>{props.input}</Text>
       </View>
 
       <View style={styles.chat_ans}>
