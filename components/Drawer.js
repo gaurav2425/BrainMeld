@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     height: P100,
     backgroundColor: '#1A1919',
     position: 'absolute',
-    right: 0,
+    left: 0,
     top: 0,
     zIndex: 1111111,
     // justifyContent: 'center',
@@ -85,6 +85,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     display: 'flex',
     flexDirection: 'column',
+    // backgroundColor: '#0C0C0C',
   },
   close_container_div: {
     width: P100,
